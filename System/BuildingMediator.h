@@ -1,18 +1,33 @@
 #ifndef BUILDINGMEDIATOR_H
 #define BUILDINGMEDIATOR_H
 
-class BuildingMediator : CityMediator {
+#include "CityMediator.h"
+
+#include "BuildingFactory.h"
+	#include "ResidentialBuildingFactory.h"
+	#include "CommercialBuildingFactory.h"
+	#include "ServiceBuildingFactory.h"
+	#include "EntertainmentBuildingFactory.cpp"
+	#include "LandmarkBuildingFactory.h"
+	#include "IndustrialBuildingFactory.h"
+	#include "PlantBuildingFactory.cpp"
+
+class BuildingMediator : public CityMediator {
 
 private:
-	BuildingFactory buildingFactory;
-	BuildingIterator buildings;
+	BuildingFactory* factory;
+	// BuildingIterator buildings;
 
 public:
-	string build(string buildingName);
+	BuildingMediator();
 
-	void assignCitizenBuildings(Citizen citizen);
+	bool build(std::string& buildingName, int locationX, int locationY) override;
 
-	bool demolish(int locationX, int locationY);
+	// void assignCitizenBuildings(Citizen citizen);
+
+	bool demolish(int locationX, int locationY) override;
+
+	~BuildingMediator();
 };
 
 #endif

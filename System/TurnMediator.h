@@ -1,7 +1,9 @@
 #ifndef TURNMEDIATOR_H
 #define TURNMEDIATOR_H
 
-class TurnMediator : CityMediator {
+#include "CityMediator.h"
+
+class TurnMediator : public CityMediator {
 
 
 public:

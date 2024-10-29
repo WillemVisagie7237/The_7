@@ -1,11 +1,13 @@
 #ifndef RESIDENTIALBUILDINGFACTORY_H
 #define RESIDENTIALBUILDINGFACTORY_H
 
-class ResidentialBuildingFactory : BuildingFactory {
+class ResidentialBuildingFactory : public BuildingFactory {
 
 
 public:
-	Building* createBuilding();
+	ResidentialBuildingFactory(std::string buildingName, int x, int y) : BuildingFactory(buildingName, x, y) {}
+	
+	virtual Building* createBuilding();
 };
 
 #endif
