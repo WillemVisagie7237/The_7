@@ -64,7 +64,7 @@ int Leaf::getTotalWasteProduction() {
 	throw "Not yet implemented";
 }
 
-BuildingState Leaf::getAndSetNextState() {
+BuildingState* Leaf::getAndSetNextState() {
 	// TODO - implement Leaf::getAndSetNextState
 	throw "Not yet implemented";
 }

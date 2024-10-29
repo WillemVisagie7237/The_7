@@ -7,6 +7,11 @@ class ConcreteIterator : Iterator {
 
 	public:
 		/**
+		 * @brief Construct a new Concrete Iterator object
+		 * 
+		 */
+		ConcreteIterator();
+		/**
 		 * @brief Adds a building to the list
 		 * 
 		 * @param building 

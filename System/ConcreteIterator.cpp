@@ -1,5 +1,10 @@
 #include "ConcreteIterator.h"
 
+ConcreteIterator::ConcreteIterator() : Iterator(){
+	// TODO - implement ConcreteIterator::ConcreteIterator
+	throw "Not yet implemented";
+}
+
 bool ConcreteIterator::add(Building* building) {
 	// TODO - implement ConcreteIterator::add
 	throw "Not yet implemented";
