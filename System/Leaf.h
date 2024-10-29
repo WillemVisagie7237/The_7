@@ -103,7 +103,7 @@ class Leaf : public Component {
 		 * 
 		 * @return BuildingState 
 		 */
-		BuildingState getAndSetNextState() override;
+		BuildingState* getAndSetNextState() override;
 };
 
 #endif // LEAF_H

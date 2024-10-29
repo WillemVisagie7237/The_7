@@ -13,7 +13,7 @@ class Composite : Component{
 		/**
 		 * Not abstract since leaf does not implement createIterator
 		 */
-
+		Composite();
 		/**
 		 * @brief Create a Iterator object
 		 * 
@@ -110,7 +110,7 @@ class Composite : Component{
 		 * 
 		 * @return BuildingState 
 		 */
-		BuildingState getAndSetNextState() override;
+		BuildingState* getAndSetNextState() override;
 	};
 
 #endif // COMPOSITE_H
