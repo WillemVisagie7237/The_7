@@ -99,7 +99,7 @@ class Leaf : public Component {
 		void remove(Component* component) override;
 
 		/**
-		 * @brief Get the and Set Next State object
+		 * @brief Get the and set Next State object
 		 * 
 		 * @return BuildingState 
 		 */
