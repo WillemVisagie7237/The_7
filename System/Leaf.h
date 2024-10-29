@@ -8,6 +8,18 @@ class Leaf : public Component {
 	public:
 		Building* building;
 		/**
+		 * @brief Construct a new Leaf object
+		 * 
+		 * @param building 
+		 */
+		Leaf(Building* building);
+
+		/**
+		 * @brief Destroy the Leaf object
+		 * 
+		 */
+		~Leaf();
+		/**
 		 * @brief 
 		 * 
 		 * @return Iterator* 
