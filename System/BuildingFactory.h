@@ -1,31 +1,15 @@
-#include <exception>
-using namespace std;
+#ifndef BUILDINGFACTORY_H
+#define BUILDINGFACTORY_H
 
-#ifndef __BuildingFactory_h__
-#define __BuildingFactory_h__
+class BuildingFactory {
 
-// #include "Client.h"
-// #include "CommercialBuilding.h"
-// #include "IndustrialBuilding.h"
-// #include "LandmarkBuilding.h"
+protected:
+	std::string& BUILDING_TYPE;
+	int LOCATION_X;
+	int LOCATION_Y;
 
-class Client;
-class CommercialBuilding;
-class IndustrialBuilding;
-class LandmarkBuilding;
-class BuildingFactory;
-
-__abstract class BuildingFactory
-{
-	public: Client* _unnamed_Client_;
-
-	public: virtual void createResidential(const std::string& aType) = 0;
-
-	public: virtual CommercialBuilding* createCommercial(const std::string& aType) = 0;
-
-	public: virtual IndustrialBuilding* createIndustrial(const std::string& aType) = 0;
-
-	public: virtual LandmarkBuilding* createLandmark(const std::string& aType) = 0;
+public:
+	Building* createBuilding();
 };
 
 #endif
