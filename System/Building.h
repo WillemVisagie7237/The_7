@@ -1,53 +1,32 @@
-#ifndef BUILDING_H
-#define BUILDING_H
+#include <exception>
+#include <string>
+using namespace std;
 
-#include "BuildingState.h"
+#ifndef __Building_h__
+#define __Building_h__
 
+// #include "Client.h"
 
+class Client;
+class Building;
 
-class Building {
+__abstract class Building
+{
+	private: int _coordinateY;
+	private: int _coordinateX;
+	private: int _space;
+	private: int _occupancy;
+	public: Client* _unnamed_Client_;
 
-private:
-	BuildingState* state;
-	int LOCATION_X;
-	int LOCATION_Y;
-	int space;
-	int occupancy;
-	int powerConsumption;
-	int waterConsumption;
-	int buildCostMoney;
-	int buildCostResources;
+	public: virtual void construct() = 0;
 
-public:
-	BuildingState* getState();
+	public: virtual void maintain() = 0;
 
-	void setState(BuildingState* state);
+	public: virtual double getMaintenanceCost() = 0;
 
-	BuildingState getAndSetNextState();
+	public: virtual int getSize() = 0;
 
-	int getXCoordinate();
-
-	int getYCoordinate();
-
-	int getSpace();
-
-	int getOccupancy();
-
-	int getAvailableSpace();
-
-	int getPowerConsumption();
-
-	int getWaterConsumption();
-
-	virtual int getCostConsumption() = 0;
-
-	virtual int getResourceConsumption() = 0;
-
-	virtual int getSewageProduction() = 0;
-
-	virtual int getWasteProduction() = 0;
-
-	virtual int getRevenue() = 0;
+	public: virtual string getBuildingType() = 0;
 };
 
 #endif

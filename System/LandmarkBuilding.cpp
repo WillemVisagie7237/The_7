@@ -1,12 +1,8 @@
 #include <exception>
-#include <string>
 using namespace std;
 
+#include "LandmarkBuilding.h"
 #include "Building.h"
-#include "Client.h"
-
-
-
 
 
 
