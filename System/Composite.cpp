@@ -1,18 +1,30 @@
 #include "Composite.h"
 
+Composite::Composite() : Component(){
+	this->components = std::vector<Component*>();
+}
+
 Iterator* Composite::createIterator() {
 	// TODO - implement Composite::createIterator
 	throw "Not yet implemented";
 }
 
 void Composite::add(Component* component) {
-	// TODO - implement Composite::add
-	throw "Not yet implemented";
+	for (int i = 0; i < this->components.size(); i++){
+		if (this->components.at(i) == component){
+			return;
+		}
+	}
+	this->components.push_back(component);
 }
 
 void Composite::remove(Component* component) {
-	// TODO - implement Composite::remove
-	throw "Not yet implemented";
+	for (int i = 0; i < this->components.size(); i++){
+		if (this->components.at(i) == component){
+			this->components.erase(this->components.begin() + i);
+			break;
+		}
+    }
 }
 
 int Composite::getTotalPowerConsumption() {
@@ -65,7 +77,7 @@ int Composite::getTotalWasteProduction() {
 	throw "Not yet implemented";
 }
 
-BuildingState Composite::getAndSetNextState() {
+BuildingState* Composite::getAndSetNextState() {
 	// TODO - implement Composite::getAndSetNextState
 	throw "Not yet implemented";
 }

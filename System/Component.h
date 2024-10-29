@@ -7,9 +7,10 @@
 
 class Component {
 	public:
-		/**
-		 * Not abstract since leaf does not implement createIterator
-		 */
+		Component();
+
+		virtual ~Component() {};
+
 		virtual Iterator* createIterator() = 0;
 
 		virtual void add(Component* component) = 0;
@@ -36,7 +37,7 @@ class Component {
 
 		virtual int getTotalWasteProduction() = 0;
 
-		virtual BuildingState getAndSetNextState() = 0;
+		virtual BuildingState* getAndSetNextState() = 0;
 	};
 
 #endif //COMPONENT_H
