@@ -33,6 +33,10 @@ class Iterator {
 		virtual bool isLeaf() = 0;
 
 		virtual BuildingState* getAndSetNextState() = 0;
+
+		virtual Building* getHouse() = 0;
+
+		virtual Building* getJob() = 0;
 };
 
 #endif //ITERATOR_H
