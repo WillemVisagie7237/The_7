@@ -8,6 +8,18 @@ class Leaf : public Component {
 	public:
 		Building* building;
 		/**
+		 * @brief Construct a new Leaf object
+		 * 
+		 * @param building 
+		 */
+		Leaf(Building* building);
+
+		/**
+		 * @brief Destroy the Leaf object
+		 * 
+		 */
+		~Leaf();
+		/**
 		 * @brief 
 		 * 
 		 * @return Iterator* 
@@ -99,7 +111,7 @@ class Leaf : public Component {
 		void remove(Component* component) override;
 
 		/**
-		 * @brief Get the And Set Next State object
+		 * @brief Get the and set Next State object
 		 * 
 		 * @return BuildingState 
 		 */
